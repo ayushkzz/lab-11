@@ -16,12 +16,12 @@ pipeline {
         stage('Build') {
             steps {
                 // Run Maven on a Unix agent.
-                bat 'mvn clean compile'
+                sh 'mvn clean compile'
             }
         }
         stage('Test') {
             steps {
-                bat 'mvn test'
+                sh 'mvn test'
             }
         }
     }
